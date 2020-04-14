@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
    # Print “Restore Health” and then print the hero
    print("Restore Health: ")
-   Geralt.restore_health(5)
+   Geralt.restore_health(10)
    Geralt.__str__()
 
    # Print “Inventory:” and then print the hero’s inventory by using the get_inventory method.
