@@ -43,22 +43,32 @@ if __name__ == "__main__":
    # Vampire Enemy with health of 20 and damage of 15.
    Vampire = Enemy("Vampire",30,20)
 
-   # Create an Enemy named “Warewolf” with health of 15 and damage of 10.
-   Warewolf = Enemy("Warewolf",15,10)
+   # Create an Enemy named “Werewolf” with health of 15 and damage of 10.
+   Werewolf = Enemy("Werewolf",15,10)
 
    # Print “Start:” and then print the three characters.
-   print("“Start:")
+   print("“Our Hero Geralt finds himself in Skellige Isles in search of a boat to get him to Novigrad.")
    Geralt.__str__()
-   Vampire.__str__()
-   Warewolf.__str__()
+   print('Press (T) to talk to a captain')
+   key = input()
+
+   if key == "T" or "t":
+       print('What ye bothering me fer?')
+
+       print('Geralt: "I Need a ride to Novigrad"')
+   else:
+       print('Press (T) to talk to captain')
+
+
+
 
    # Print “Battle 1:” and then print the hero and the warewolf.
    print("Battle 1:")
    # The hero damages the warewolf by 10. The warewolf damages the hero by its full damage strength
-   Geralt.take_damage(Warewolf.damageAmount)
-   Warewolf.take_damage(10)
+   Geralt.take_damage(Werewolf.damageAmount)
+   Werewolf.take_damage(10)
    Geralt.__str__()
-   Warewolf.__str__()
+   Werewolf.__str__()
    print('Geralt damages the warewolf by 10. The warewolf damages the hero by its full damage strength')
 
    # Print “Battle 2:” and then print the hero and the zombie.
