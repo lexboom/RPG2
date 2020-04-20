@@ -71,9 +71,9 @@ if __name__ == "__main__":
 
 
 
-   # Print “Battle 1:” and then print the hero and the warewolf.
+   # Print “Battle 1:” and then print the hero and the werewolf.
    print("Battle 1:")
-   # The hero damages the warewolf by 10. The warewolf damages the hero by its full damage strength
+   # The hero damages the warewolf by 10. The werewolf damages the hero by its full damage strength
    Geralt.take_damage(Werewolf.damageAmount)
    Werewolf.take_damage(10)
    Geralt.__str__()
