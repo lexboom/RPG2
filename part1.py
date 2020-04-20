@@ -50,6 +50,7 @@ if __name__ == "__main__":
    # Print “Start:” and then print the three characters.
    print("“Our Hero Geralt finds himself in Skellige Isles in search of a boat to get him to Novigrad.")
    Geralt.__str__()
+  ## Talking to the captain ##
    print('Press (T) to talk to a captain')
    key = input()
 
@@ -63,8 +64,19 @@ if __name__ == "__main__":
 
        if key2 == "I" or "i":
          print(Geralt.get_inventory())
+         print('Press (B) to buy a fare')
+         key3 = input()
        else:
            print('Press (I) to view inventory')
+
+
+       if key3 == 'B' or 'b':
+           Geralt.remove_inventory("50 gold coins")
+           Geralt.add_inventory("40 gold coins")
+           print(Geralt.get_inventory())
+           print('Geralt Sails his way across the rough seas determined to make it to Novigrad in the hopes of a long awaited reunion with Jennefer')
+       else:
+           print('Press (B) to buy a fare')
    else:
        print('Press (T) to talk to captain')
 
