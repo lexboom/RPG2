@@ -39,6 +39,7 @@ class Enemy(Character):
 if __name__ == "__main__":
    # Our Hero Geralt
    Geralt = Hero("Geralt",40)
+   Geralt.add_inventory("50 gold coins")
 
    # Vampire Enemy with health of 20 and damage of 15.
    Vampire = Enemy("Vampire",30,20)
@@ -56,6 +57,14 @@ if __name__ == "__main__":
        print('What ye bothering me fer?')
 
        print('Geralt: "I Need a ride to Novigrad"')
+       print('''Captain: "That'll cost ye 10 gold"''')
+       print('Press (I) to view inventory')
+       key2 = input()
+
+       if key2 == "I" or "i":
+         print(Geralt.get_inventory())
+       else:
+           print('Press (I) to view inventory')
    else:
        print('Press (T) to talk to captain')
 
