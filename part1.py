@@ -81,16 +81,22 @@ if __name__ == "__main__":
        print('Press (T) to talk to captain')
 
 
+print('Geralt makes his way to the shores of the Mainland. As he and his stead Roach traverse the backwoods paths he can smell something is lurking near by. Geralt makes an attempt to speed roach up in an attempt to outrun the mysteryious beast. He can hear branches breaking  behind him run from the trees appears a Werewolf. Geralt has no choice but to make a stand against the monster.')
 
+   # Print Battle 1 and then print the hero and the werewolf.
+print('Press "'"a"'" to atatck the Werewolf')
+key4 = input()
+if key4 == 'a' or 'A':
 
-   # Print “Battle 1:” and then print the hero and the werewolf.
-   print("Battle 1:")
-   # The hero damages the warewolf by 10. The werewolf damages the hero by its full damage strength
    Geralt.take_damage(Werewolf.damageAmount)
-   Werewolf.take_damage(10)
+   Werewolf.take_damage(15)
+   print(' The Werewolf damages the hero by its full damage strength. Geralt damages the Werewolf critcally')
    Geralt.__str__()
    Werewolf.__str__()
-   print('Geralt damages the warewolf by 10. The warewolf damages the hero by its full damage strength')
+   Geralt.add_inventory("Werewolf Claws")
+   Geralt.remove_inventory("40 gold coins")
+   Geralt.add_inventory("50 gold coins")
+   print("Inventory: ", Geralt.get_inventory())
 
    # Print “Battle 2:” and then print the hero and the zombie.
    print("Battle 2:")
