@@ -125,8 +125,15 @@ if healing == 1:
 else:
     print('Press (1)')
 
-print('Geralt finds himself in a village full of hysterical people. The villagers seemed happy to see Geralt, not a common welcoming \nfor a Witcher. A villager runs up to our hero and grabs him by the shoulder')
-print("Battle 2:")
+print('Geralt finds himself in a village full of hysterical people. The villagers seemed happy to see Geralt, not a common welcoming \nfor a Witcher. A villager runs up to our hero and grabs him by the shoulder...')
+print("Villager: We found a villager yesterday morning dead, pale as a ghost with a strange bite mark on his neck")
+print('Geralt: any chance the body is still above ground?')
+print('I can take you to it if ye like sire')
+print('\n The villager brings the Witcher around to get a glance at the lifeless pale body\n')
+print('Geralt: Looks like a Higher Vampire, It will cost you a hefty bag...')
+print('Villager: The whole village collected 500 Orens, That is all we have sire.')
+print('Geralt: A bit light but I guess it will have to do.')
+print('\n Geralt ')
 Geralt.take_damage(Vampire.damageAmount)
 Vampire.take_damage(20)
 Geralt.__str__()
