@@ -39,7 +39,7 @@ if __name__ == "__main__":
     Geralt = Hero("Geralt",40)
     Geralt.add_inventory("50 gold coins")
 
-   # Vampire Enemy with health of 20 and damage of 15.
+   # Vampire Enemy with health of 30 and damage of 20.
     Vampire = Enemy("Vampire",30,20)
 
    # Create an Enemy named “Werewolf” with health of 15 and damage of 10.
@@ -125,6 +125,10 @@ if healing == 1:
 else:
     print('Press (1)')
 
+
+##Vampire Battle#####
+
+
 print('Geralt finds himself in a village full of hysterical people. The villagers seemed happy to see Geralt, not a common welcoming \nfor a Witcher. A villager runs up to our hero and grabs him by the shoulder...')
 print("Villager: We found a villager yesterday morning dead, pale as a ghost with a strange bite mark on his neck")
 print('Geralt: any chance the body is still above ground?')
@@ -133,20 +137,50 @@ print('\n The villager brings the Witcher around to get a glance at the lifeless
 print('Geralt: Looks like a Higher Vampire, It will cost you a hefty bag...')
 print('Villager: The whole village collected 500 Orens, That is all we have sire.')
 print('Geralt: A bit light but I guess it will have to do.')
-print('\n Geralt ')
+print('\n Geralt gathered some animal blood to bait the creature, and found a tree to wait in for the moonlight. Geralt awoke to the sounds\n of snarling coming from below. Geralt leaps from the tree landing right in front of the bloodthirsty beast.')
+
+print('\nThe Vampire Strikes Geralt')
 Geralt.take_damage(Vampire.damageAmount)
-Vampire.take_damage(20)
 Geralt.__str__()
-Vampire.__str__()
+print('Press (2) to attack the Vampire')
+key4 = int(input())
+if key4 == 2:
+    Vampire.take_damage(20)
+    Vampire.__str__()
+else:
+    print('Press (2) to attack the Vampire')
+    key4 = int(input())
+    if key4 == 2:
+        Vampire.take_damage(20)
+        Vampire.__str__()
+    else:
+        Geralt.take_damage(Vampire.damageAmount)
+        print('Geralt was killed. Game over!')
+        exit()
 
-   # Print “Restore Health” and then print the hero
-print("Restore Health: ")
-Geralt.restore_health(5)
+print('\nThe Vampire Strikes Geralt')
+Geralt.take_damage(10)
 Geralt.__str__()
+print('Press (2) to attack the Vampire')
+key4 = int(input())
+if key4 == 2:
+    Vampire.take_damage(10)
+    Vampire.__str__()
+    print('Gerlat drives a stake through the vampires heart wounding it fatally')
+    Geralt.__str__()
+    # Print “Inventory:” and then print the hero’s inventory by using the get_inventory method.
+    print("Inventory: ")
+    Geralt.add_inventory("gold coin")
+    Geralt.add_inventory("Vampire Fangs")
+    print(Geralt.get_inventory())
+else:
+    Geralt.take_damage(Vampire.damageAmount)
+    print('Geralt was killed. Game over!')
+    exit()
 
-   # Print “Inventory:” and then print the hero’s inventory by using the get_inventory method.
-print("Inventory: ")
-Geralt.add_inventory("gold coin")
-Geralt.add_inventory("Vampire Fangs")
-print(Geralt.get_inventory())
+
+
+print("Geralt used his Bounty paid on the Vampire to fund some supplies for his journey westward, towards Jennefer. Hopefully he can make it there \n in one piece. The road to Novigrad is long and full of peril.....")
+print("End part 1")
+
 
